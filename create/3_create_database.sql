@@ -69,3 +69,23 @@ VALUES
 'Install PostgreSQL in a container and access the data.',
 'https://miro.medium.com/v2/resize:fit:720/format:webp/0*prut14lFoArZnPK5.jpg',
 'Week 2 - Postres DB, Django API');
+
+-- New WebUser
+INSERT INTO WebUser
+(web_user_id, first_name, last_name, email, password, created_date, is_active, last_login)
+VALUES
+(3, 'Yanny', 'Vega', 'yanny.vega@email.com', 'Password.1', CURRENT_TIMESTAMP, true, CURRENT_TIMESTAMP);
+
+-- New Address
+INSERT INTO UserAddress
+(user_address_id, web_user_id, street_1, street_2, city, st, zip, country, address_type_id, created_date)
+VALUES
+(4, 3, '300 Lazy St', '', 'LazyTown', 'UT', '84000', 'United States', 1, CURRENT_TIMESTAMP);
+
+-- New Page
+INSERT INTO PageData
+(page_data_id, week, title, description, image_url, page_name)
+VALUES
+(3, 'Week 3', 'Swagger I Guess', 'Create Swagger n Info',
+'https://www.linkedin.com/in/yannyvega',
+'Week 3 - Dat and Info');
